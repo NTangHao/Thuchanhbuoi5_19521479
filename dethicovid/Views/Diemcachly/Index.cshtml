@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "InsertKH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>InsertKH</h1>
+
+<form asp-controller="Diemcachly" asp-action="InsertKH" method="post" >
+    <label>Mã điểm cách ly:</label><input type="text" name="MaDiemCachLy" /><br>
+    <label>Tên điểm cách ly</label><input type="text" name="TenDiemCachLy" /><br>
+    <label>DC điểm cách ly</label><input type="text" name="DiaChi" /><br>
+    <input type="submit" value="Thêm" name="submit" id="them" />
+</form>

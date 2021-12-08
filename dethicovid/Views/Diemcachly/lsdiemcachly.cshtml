@@ -1,0 +1,18 @@
+﻿@model List<object>
+@{
+    ViewData["Title"] = "lsdiemcachly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-controller="Diemcachly" asp-action="lscongnhancachly" method="POST">
+    <label> Tên điểm cách ly</label>
+    <select name="macachly" id="macachly">
+        @foreach (var item in Model)
+        {
+        <option value=" @item.GetType().GetProperty("MaDiemCachLy").GetValue(item, null)">@item.GetType().GetProperty("TenDiemCachLy").GetValue(item, null) </option>
+
+        }
+    </select><br>
+    <input type="submit" value="Liệt Kê"  />
+</form>
+

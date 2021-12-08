@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Triệu chứng</h1>
+
+<form asp-controller="Trieuchung" asp-action="Lietkesolan" method="post">
+    <label>Số triệu chứng:</label><input type="number" name="solan" /><br>
+    <input type="submit" value="Liệt Kê" name="submit" id="them" />
+</form>
